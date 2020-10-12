@@ -1,1 +1,149 @@
-.site-header{}
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+}
+
+.site-header__container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  padding-bottom: 52px;
+  justify-content: space-between;
+}
+
+.site-header__contacts{
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  max-width: 200px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-black;
+  text-decoration: none;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.site-header__contacts::before{
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin-right: 7px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  content: "";
+}  
+
+.site-header__contacts-inner{
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header__contacts-text{
+  display: inline-block;
+}
+
+.site-header__contacts-phone{
+  display: inline-block;
+  font-weight: 300;
+}
+
+.site-header__logo{
+  margin-right: 30px;
+  margin-left: 30px;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.site-header__working{
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  max-width: 200px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $light-black;
+}
+
+.site-header__working::before{
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin-right: 7px;
+  background-image: url("../img/clock.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  content: "";
+}
+
+.site-header__working-inner{
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header__working-text{
+  display: inline-block;
+  color: #00B007;
+}
+
+.site-header__working-time{
+  display: inline-block;
+  font-weight: 300;
+}
+
+.site-header__nav{
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: $blue;
+}
+
+@include breakpoint-down (1024px){
+  .site-header__container{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header__contacts{
+    display: none;
+  }
+  
+  .site-header__logo{
+    display: none;
+  }
+  
+  .site-header__working{
+    display: none;
+  }
+  
+  .site-header__nav{
+    position: relative;
+    transform: translateY(0);
+  }
+}
+

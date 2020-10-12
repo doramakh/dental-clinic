@@ -1,1 +1,172 @@
-.sitenav{}
+.sitenav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  border-radius: 5px;
+  
+  &--open .sitenav__toggler {
+    background-image: url("../img/close.svg");
+  }
+  
+  &--open .sitenav__menu{
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: $blue;
+  }
+  
+  &--open .sitenav__list{
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 62px;
+  }
+  
+  &--open .sitenav__item{
+    &:not(:last-child){
+      margin-right: 0;
+    }
+  }
+  
+  &--open .sitenav__link{
+    padding: 24px 0;
+    border: 1px solid $yellow;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    
+    &:hover{
+      color: $blue;
+      background-color: $yellow;
+    }
+    
+    &:active{
+      opacity: 0.8;
+    }
+  }
+}
+
+.sitenav__logo{
+  display: none;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.sitenav__menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sitenav__list{
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+}
+
+.sitenav__item{
+  &:not(:last-child){
+    margin-right: 35px;
+  }
+}
+
+.sitenav__link{
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  color: $white;
+  
+  &:hover{
+    color: $yellow;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.sitenav__socials-list{
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sitenav__socials-item{
+  display: flex;
+  
+  &:not(:last-child){
+    margin-right: 12px;
+  }
+}
+
+.sitenav__socials-link{
+  display: inline-block;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.sitenav__socials-img{
+  display: block;
+}
+
+.sitenav__toggler {
+  display: none;
+  position: relative;
+  z-index: 5;
+  width: 25px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/gamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+@include breakpoint-down (1024px){
+  .sitenav{
+    border-radius: 0;
+  }
+  
+  .sitenav__logo{
+    display: block;
+  }
+  
+  .sitenav__menu{
+    max-width: 640px;
+  }
+}
+
+@include breakpoint-down (880px){
+  .sitenav__menu{
+    display: none;
+  }
+  
+  .sitenav__toggler{
+    display: block;
+  }
+}
