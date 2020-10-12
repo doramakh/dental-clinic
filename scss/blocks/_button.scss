@@ -1,0 +1,43 @@
+.button{
+  display: inline-block;
+  min-width: 265px;
+  max-width: 265px;
+  padding: 22px 16px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  text-align: center;
+  
+  &--dark{
+    color: $white;
+    background-color: $blue;
+    
+    &:hover{
+      opacity: 0.8;
+    }
+    
+    &:active{
+      opacity: 0.6;
+    }
+  }
+  
+  &--light{
+    color: $dark-grey;
+    border: 2px solid $blue;
+    
+    &:hover{
+      color: $white;
+      background-color: $blue;
+    }
+
+    &:active{
+      opacity: 0.6;
+    }
+  }
+}

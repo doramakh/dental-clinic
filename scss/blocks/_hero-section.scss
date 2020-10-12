@@ -1,8 +1,65 @@
 .hero-section{
-  padding-top: 310px;
-  padding-bottom: 150px;
+  padding-top: 315px;
+  padding-bottom: 232px;
   background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.hero-section__container{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section__list{
+  @include reset-list;
+  max-width: 560px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 135px;
+}
+
+.hero-section__btn-wrapper{
+  display: flex;
+}
+
+.hero-section__btn{
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: $yellow;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  
+  & + .hero-section__btn{
+    margin-left: 9px;
+  }
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.hero-section__btn--prev{
+  width: 42px;
+  background-image: url("../img/prev-btn.svg");
+}
+
+.hero-section__btn--next{
+  background-image: url("../img/next-btn.svg");
+}
+
+@include retina-bg{
+  .hero-section{
+    background-image: url("../img/hero-bg@2x.jpg");
+  }
 }
