@@ -15,7 +15,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 158px;
+  margin-top: 120px;
   overflow-x: hidden;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -23,7 +23,7 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 img {
@@ -37,6 +37,12 @@ main {
 
 @include breakpoint-down (1024px){
   body{
-    margin-top: 74px;
+    margin-top: 66px;
+  }
+}
+
+@include breakpoint-down (900px){
+  body{
+    margin-top: 60px;
   }
 }

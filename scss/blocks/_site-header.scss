@@ -127,18 +127,21 @@
   .site-header__contacts::before{
     background-image: url("../img/phone@2x.png");
   }
-
+  
   .site-header__working::before{
     background-image: url("../img/clock@2x.png");
   }
 }
 
 @include breakpoint-down (1024px){
-  .site-header__container{
-    padding-top: 0;
-    padding-bottom: 0;
+  .site-header{
+    background-color: $blue;
   }
-
+  
+  .site-header__container{
+    padding: 0;
+  }
+  
   .site-header__contacts{
     display: none;
   }
