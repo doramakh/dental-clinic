@@ -1,0 +1,60 @@
+.slider-wrapper{
+  position: relative;
+  z-index: 1;
+  display: block;
+  // align-items: center;
+  // justify-content: center;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.slider__btn{
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  display: inline-block;
+  width: 42px;
+  height: 49px;
+  border: 2px solid #1D6ECB;
+  background-color: transparent;
+  background-image: url("../img/prev-icon.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  
+  &:hover{
+    opacity: 0.8;
+  }
+  
+  &:active{
+    opacity: 0.6;
+  }
+}
+
+.slider__btn-prev{
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.slider__btn-next{
+  right: 0;
+  transform: rotate(180deg) 
+  translate(0, 50%);
+}
+
+.slider{
+  @include reset-list;
+  display: flex;
+  margin: 0 67px;
+  overflow: hidden;
+}
+
+@include breakpoint-down (750px){
+  .slider__btn{
+    display: none;
+  }
+
+  .slider{
+    margin: 0;
+  }
+}
