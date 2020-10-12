@@ -1,0 +1,147 @@
+.features{
+  padding-bottom: 75px;
+  background-color: $white;
+}
+
+.features__container{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.features__img{
+  display: block;
+  max-width: 680px;
+  object-fit: cover;
+  margin-right: 100px;
+}
+
+.features__info{
+  max-width: 760px;
+}
+
+.features__heading{
+  max-width: 500px;
+}
+
+.features__text{
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: 300;
+}
+
+.features__list{
+  @include reset-list;
+  max-width: 625px;
+}
+
+.features__item{
+  display: flex;
+
+  & + .features__item{
+    margin-top: 18px;
+  }
+}
+
+.feature{
+  &::before{
+    display: block;
+    min-width: 72px;
+    max-width: 72px;
+    height: 70px;
+    margin-right: 38px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    content: "";
+  }
+}
+
+.feature--expert::before{
+  background-image: url("../img/expert.png");
+}
+
+.feature--treatment::before{
+  background-image: url("../img/treatment.png");
+}
+
+.feature--location::before{
+  background-image: url("../img/location.png");
+}
+
+.feture__name{
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.feature__description{
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: $dark-grey;
+}
+
+@include breakpoint-down (1440px){
+  .features__img{
+    max-width: 640px;
+    margin-right: 110px;
+  }
+
+  .features__info{
+    max-width: 540px;
+  }
+}
+
+@include breakpoint-down (1024px){
+  .features__img{
+    max-width: 440px;
+    margin-right: 20px;
+  }
+}
+
+@include breakpoint-down (850px){
+  .features__container{
+    flex-direction: column;
+  }
+
+  .features__img{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 27px;
+  }
+
+  .features__info{
+    max-width: 100%;
+  }
+
+  .features__heading{
+    max-width: 100%;
+  }
+
+  .features__list{
+    margin-left: 30px;
+  }
+}
+
+@include breakpoint-down (550px){
+  .feature__description{
+    display: none;
+  }
+}
+
+@include retina-bg{
+  .feature--expert::before{
+    background-image: url("../img/expert@2x.png");
+  }
+  
+  .feature--treatment::before{
+    background-image: url("../img/treatment@2x.png");
+  }
+  
+  .feature--location::before{
+    background-image: url("../img/location@2x.png");
+  }
+}

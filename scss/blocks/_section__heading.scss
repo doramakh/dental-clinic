@@ -1,4 +1,4 @@
-.section-heading{
+.section__heading{
   position: relative;
   margin-top: 0;
   padding-top: 16px;
@@ -53,7 +53,7 @@
 }
 
 @include breakpoint-down (650px){
- .section-heading{
+ .section__heading{
   margin-bottom: 0;
 
   &--lg{
