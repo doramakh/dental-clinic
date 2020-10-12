@@ -1,0 +1,63 @@
+.section-heading{
+  position: relative;
+  margin-top: 0;
+  padding-top: 16px;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: $light-black;
+  text-align: center;
+  
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 50px;
+    height: 6px;
+    background-color: $yellow;
+    content: "";
+  }
+  
+  &::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    display: inline-block;
+    max-width: 275px;
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 152px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    content: ":D :P";
+  }
+
+  &--lg{
+    text-align: left;
+
+    &::before{
+      left: 0;
+      transform: translateX(0);
+    }
+
+    &::after{
+      left: 0;
+      transform: translate(0, -5%);
+    }
+  }
+}
+
+@include breakpoint-down (650px){
+ .section-heading{
+  margin-bottom: 0;
+
+  &--lg{
+    margin-bottom: 4px;
+  }
+ }
+}
