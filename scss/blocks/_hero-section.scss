@@ -1,10 +1,9 @@
 .hero-section{
+  position: relative;
+  z-index: 1;
   padding-top: 315px;
   padding-bottom: 232px;
-  background-image: url("../img/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: transparent;
 }
 
 .hero-section__container{
@@ -14,9 +13,6 @@
 
 .hero-section__list{
   @include reset-list;
-  max-width: 560px;
-  margin-left: -20px;
-  margin-right: -20px;
   margin-bottom: 135px;
 }
 
@@ -57,9 +53,35 @@
 .hero-section__btn--next{
   background-image: url("../img/next-btn.svg");
 }
-
-@include retina-bg{
+@include breakpoint-down (1024px){
   .hero-section{
-    background-image: url("../img/hero-bg@2x.jpg");
+    padding-top: 279px;
+  }
+}
+
+@include breakpoint-down (750px){
+  .hero-section{
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
+  .hero-section__btn-wrapper{
+    position: absolute;
+    z-index: 2;
+    top: 580px;
+    left: 40px;
+  }
+
+  .hero-section__btn{
+    width: 44px;
+    height: 44px;
+
+    & + .hero-section__btn{
+      margin-left: 6px;
+    }
+  }
+
+  .hero-section__btn--prev{
+    width: 27px;
   }
 }

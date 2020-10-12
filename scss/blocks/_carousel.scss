@@ -1,5 +1,8 @@
 .carousel{
   display: flex;
+  max-width: 560px;
+  margin-left: -20px;
+  margin-right: -20px;
   overflow: hidden;
 }
 
@@ -7,7 +10,7 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  width: 545px;
+  max-width: 545px;
   margin-left: 20px;
   margin-right: 20px;
   color: $light-black;
@@ -29,6 +32,68 @@
   line-height: 21px;
 }
 
+.carousel__img{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 1920px;
+  height: 900px;
+  object-fit: cover;
+}
+
 .carousel__btn{
   text-transform: uppercase;
+}
+
+@include breakpoint-down (1000px){
+  .carousel{
+    max-width: 400px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .carousel__item{
+    max-width: 400px;
+    margin: 0;
+  }
+}
+
+@include breakpoint-down (750px){
+  .carousel{
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .carousel__item{
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .carousel__img{
+    position: static;
+    max-height: 650px;
+    margin-bottom: 24px;
+    order: -2;
+  }
+  
+  .carousel__tagline{
+    margin-bottom: 21px;
+    line-height: 25px;
+  }
+  
+  .carousel__heading{
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 35px;
+  }
+  
+  .carousel__btn{
+    display: none;
+  }
 }
