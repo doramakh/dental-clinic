@@ -9,6 +9,7 @@
 }
 
 .features__img{
+  order: -1;
   display: block;
   max-width: 680px;
   object-fit: cover;
@@ -94,7 +95,7 @@
   }
 }
 
-@include breakpoint-down (1024px){
+@include breakpoint-down (1150px){
   .features__img{
     max-width: 440px;
     margin-right: 20px;
