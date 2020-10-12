@@ -1,0 +1,18 @@
+.page__body{
+  &--nojs{
+    margin-top: 0;
+  }
+
+  &--nojs .site-header{
+    position: relative;
+    margin-bottom: 34px;
+  }
+}
+
+@include breakpoint-down (1024px){
+  .page__body{
+    &--nojs .site-header{
+      margin-bottom: 0;
+    }
+  }
+}

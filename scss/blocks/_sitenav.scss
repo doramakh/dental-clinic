@@ -19,8 +19,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
-    max-height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
     background-color: $blue;
   }
   
@@ -51,6 +51,14 @@
       color: $blue;
       background-color: $yellow;
     }
+  }
+  
+  &--nojs .sitenav__menu{
+    display: flex;
+  }
+  
+  &--nojs .sitenav__toggler{
+    display: none;
   }
 }
 
@@ -162,6 +170,21 @@
 }
 
 @include breakpoint-down (900px){
+  .sitenav{
+    &--nojs{
+      flex-direction: column;
+    }
+
+    &--nojs .sitenav__menu{
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    &--nojs .sitenav__list{
+      margin-bottom: 24px;
+    }
+  }
+
   .sitenav__menu{
     display: none;
   }

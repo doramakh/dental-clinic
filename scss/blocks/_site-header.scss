@@ -123,6 +123,16 @@
   background-color: $blue;
 }
 
+@include retina-bg{
+  .site-header__contacts::before{
+    background-image: url("../img/phone@2x.png");
+  }
+
+  .site-header__working::before{
+    background-image: url("../img/clock@2x.png");
+  }
+}
+
 @include breakpoint-down (1024px){
   .site-header__container{
     padding-top: 0;
