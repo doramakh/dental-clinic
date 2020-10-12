@@ -43,13 +43,9 @@
     text-transform: uppercase;
     text-align: center;
     
-    &:hover{
+    &:active{
       color: $blue;
       background-color: $yellow;
-    }
-    
-    &:active{
-      opacity: 0.8;
     }
   }
 }
@@ -161,12 +157,31 @@
   }
 }
 
-@include breakpoint-down (880px){
+@include breakpoint-down (900px){
   .sitenav__menu{
     display: none;
   }
   
   .sitenav__toggler{
     display: block;
+  }
+}
+
+@include breakpoint-down (600px){
+  .sitenav{
+    &--nojs .sitenav__list{
+      flex-direction: column;
+    }
+
+    &--nojs .sitenav__item{
+      &:not(:last-child){
+        margin-right: 0;
+      }
+    }
+
+    &--nojs .sitenav__link{
+      padding: 10px 0;
+      text-align: center;
+    }
   }
 }
