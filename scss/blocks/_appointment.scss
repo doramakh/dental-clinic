@@ -1,5 +1,5 @@
 .appointment{
-  margin-top: -60px;
+  margin-top: -77px;
   background-color: $white;
 }
 
@@ -67,6 +67,11 @@
   margin-bottom: 0;
 }
 
+.appointment__form{
+  position: relative;
+  z-index: 1;
+}
+
 @include retina-bg{
   .app-treatment::before{
     background-image: url("../img/app-treatment@2x.png");
@@ -83,9 +88,13 @@
   }
 }
 
-@include breakpoint-down (900px){
+@include breakpoint-down (905px){
   .appointment{
     margin-top: 0;
+  }
+
+  .appointment__form{
+    position: static;
   }
 
   .appointment__list{

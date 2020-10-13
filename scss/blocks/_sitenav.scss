@@ -166,7 +166,7 @@
   }
 }
 
-@include breakpoint-down (860px){
+@include breakpoint-down (890px){
   .sitenav{
     &--nojs{
       flex-direction: column;

@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   padding-top: 315px;
-  padding-bottom: 232px;
+  padding-bottom: 147px;
   background-color: transparent;
 }
 
@@ -53,7 +53,8 @@
 .hero-section__btn--next{
   background-image: url("../img/next-btn.svg");
 }
-@include breakpoint-down (1024px){
+
+@include breakpoint-down (905px){
   .hero-section{
     padding-top: 279px;
   }
