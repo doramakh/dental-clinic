@@ -1,0 +1,77 @@
+.appointment{
+  margin-top: -60px;
+  background-color: $white;
+}
+
+.appointment__container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.appointment__list{
+  @include reset-list;
+  display: flex;
+}
+
+.appointment__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 36px;
+  border-radius: 5px;
+  max-width: 300px;
+  color: $light-black;
+  
+  &:nth-of-type(1){
+    background-color:#FFD600;
+  }
+  
+  &:nth-of-type(2){
+    background-color:#FFE040;
+  }
+
+  &::before{
+    display: block;
+    width: 87px;
+    height: 87px;
+    margin-bottom: 19px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    mix-blend-mode: multiply;
+    content: "";
+  }
+}
+
+.app-treatment::before{
+  background-image: url("../img/app-treatment.png");
+}
+
+.app-prosthetics::before{
+  background-image: url("../img/app-prosthetics.png");
+}
+
+.appointment__name{
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.appointment__info{
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@include retina-bg{
+  .app-treatment::before{
+    background-image: url("../img/app-treatment@2x.png");
+  }
+  
+  .app-prosthetics::before{
+    background-image: url("../img/app-prosthetics@2x.png");
+  }
+}
