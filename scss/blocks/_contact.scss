@@ -35,11 +35,11 @@
 .contact__form{
   position: absolute;
   z-index: 1;
-  bottom: 150px;
+  bottom: 100px;
   left: 20px;
 }
 
-@include breakpoint-down (850px){
+@include breakpoint-down (1000px){
   .contact__form{
     position: static;
     order: -1;
@@ -48,6 +48,6 @@
   }
   
   .contact__map-img{
-    height: 205px;
+    height: 300px;
   }
 }
