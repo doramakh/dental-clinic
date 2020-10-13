@@ -277,8 +277,16 @@
               <a class="quality__button button button--dark" href="#">Learn more</a>
             </div><!-- quality__bottom -->
           </div>
-          
-          <img class="quality__img" src="img/quality.jpg" alt="Image of doctor seeing child" width="750" height="600" srcset="img/quality.jpg 1x, img/quality@2x.jpg 2x">
+
+          <picture>
+            <source media="(max-width:900px)" srcset="img/quality-mobile.jpg 1x, img/quality-mobile@2x.jpg 2x">
+
+            <source media="(max-width:1200px)" srcset="img/quality-tablet.jpg 1x, img/quality-tablet@2x.jpg 2x">
+            
+            <source type="image/webp" srcset="img/quality.webp 1x, img/quality@2x.webp 2x">
+    
+            <img class="quality__img" src="img/quality.jpg" alt="Image of doctor seeing child" width="750" height="613" srcset="img/quality.jpg 1x, img/quality@2x.jpg 2x">
+          </picture>
         </div>
       </section>
       
@@ -313,7 +321,7 @@
 
             <a class="reviews__button button button--light" href="#">Give feedback</a>
           </div>
-        </section>
+      </section>
         
         
         <section class="contact">
