@@ -1,0 +1,53 @@
+.contact{
+  padding-top: 35px;
+  background-color: $white;
+}
+
+.contact__container{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact__text{
+  max-width: 880px;
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: 300;
+  color: $light-black;
+}
+
+.contact__map{
+  display: block;
+  width: 100%;
+}
+
+.contact__map-img{
+  display: block;
+  width: 100%;
+  height: 760px;
+  object-fit: cover;
+}
+
+.contact__form{
+  position: absolute;
+  z-index: 1;
+  bottom: 150px;
+  left: 20px;
+}
+
+@include breakpoint-down (850px){
+  .contact__form{
+    position: static;
+    order: -1;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .contact__map-img{
+    height: 205px;
+  }
+}
