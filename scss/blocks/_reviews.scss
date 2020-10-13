@@ -1,0 +1,98 @@
+.reviews{
+  padding-top: 80px;
+  padding-bottom: 35px;
+  background-color: $white;
+}
+
+.reviews__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews__heading-mobile{
+  display: none;
+}
+
+.reviews__text{
+  max-width: 480px;
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-weight: 300;
+  color: $light-black;
+}
+
+.reviews__list{
+  @include reset-list;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 49px;
+}
+
+.reviews__item{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.patient{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.patient__img{
+  order: -1;
+  display: block;
+  width: 354px;
+  height: 240px;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.patient__name{
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.patient__comment{
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: $light-black;
+}
+
+@include breakpoint-down (850px){
+  .reviews__heading-desktop{
+    display: none;
+  }
+
+  .reviews__heading-mobile{
+    display: block;
+  }
+
+  .patient-vasilisa{
+    display: none;
+  }
+
+  .patient-petr{
+    display: none;
+  }
+
+  .patient-ivan{
+    max-width: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .patient__img{
+    align-self: center;
+  }
+}
