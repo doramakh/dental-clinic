@@ -47,7 +47,7 @@
   max-width: 230px;
   padding: 15px 20px;
   margin-bottom: 22px;
-  color: $light-black;
+  color: #272727;
   background-color: $yellow;
   
   &:hover{
@@ -84,6 +84,7 @@
   height: 35px;
   border: 1px solid $white;
   border-radius: 5px;
+  background-color: transparent;
 }
 
 .form__checkbox-btn::before{
@@ -97,7 +98,7 @@
   content: "";
 }
 
-.form__chekbox-input:focus + .form__checkbox-btn::before{
+.form__chekbox-input:checked + .form__checkbox-btn::before {
   display: inline-block;
 }
 
